@@ -1,0 +1,9 @@
+page {
+  background-color: #f9faf9;
+}
+
+.direction-row {
+  + .direction-row {
+    margin-top: 15px;
+  }
+}

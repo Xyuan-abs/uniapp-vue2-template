@@ -1029,10 +1029,10 @@
     pako "^1.0.11"
     safe-area-insets "^1.4.1"
 
-"@dcloudio/uni-helper-json@*":
+"@dcloudio/uni-helper-json@^1.0.13":
   version "1.0.13"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.13.tgz#4e8aa062daaefb30d98973c035a7b0ab628329c7"
-  integrity sha1-ToqgYtqu+zDZiXPANaewq2KDKcc=
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-helper-json/-/uni-helper-json-1.0.13.tgz#4e8aa062daaefb30d98973c035a7b0ab628329c7"
+  integrity sha512-FO9Iu4zW4td3Tr+eiCDWuele2ehkJ4qxQ/UhpAMLjso+ZdWz6NagK5Syh6cdy1hoDqbxpNoqnLynuJXe81Ereg==
 
 "@dcloudio/uni-i18n@^2.0.1-33520211229002":
   version "2.0.1-33520211229002"
@@ -10731,6 +10731,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.npmmirror.com/uuid/download/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uview-ui@^2.0.19:
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/uview-ui/-/uview-ui-2.0.19.tgz#52637b782ebda3d6a8d5b10de12c760e8bbae8e1"
+  integrity sha512-ddZiaP7R9wsUxMzAuhuXgh5OswgCm2lKuulTqjnRXFr0uUWsgL1iBifU3GbOwpwP0LtTHKJOo9rYv1LP0WXmzA==
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"

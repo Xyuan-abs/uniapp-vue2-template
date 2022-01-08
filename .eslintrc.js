@@ -3,6 +3,9 @@ module.exports = {
   env: {
     node: true,
   },
+  globals: {
+    uni: 'readonly',
+  },
   extends: ['plugin:vue/recommended', 'eslint:recommended', '@vue/prettier'],
   parserOptions: {
     ecmaVersion: 2022,
