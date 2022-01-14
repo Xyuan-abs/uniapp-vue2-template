@@ -4,6 +4,14 @@
       "@dcloudio/types",
       "miniprogram-api-typings",
       "mini-types"
-    ]
-  }
+    ],
+    "target": "ES6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {          
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
 }
