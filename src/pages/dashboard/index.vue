@@ -2,12 +2,7 @@
   <view class="index">
     <!-- 搜索 -->
     <view class="direction-row">
-      <u-search
-        v-model="keyword"
-        placeholder="日照香炉生紫烟"
-        :show-action="false"
-        search-icon="scan"
-      ></u-search>
+      <dashboard-search />
     </view>
 
     <!-- 轮播图 -->
@@ -23,46 +18,41 @@
       <class-nav />
     </view>
 
-    <!-- 列表 -->
+    <!-- 蓝牙 -->
     <view class="direction-row">
-      <!-- <ins-panel>
-        <view class="container">
-          <image class="logo" src="/static/logo.png"></image>
-          <text class="title">{{ info }}</text>
-          <u-button type="primary" :plain="true" text="镂空按钮" @click="nextPage"></u-button>
-        </view>
-      </ins-panel> -->
+      <blue-tooth />
     </view>
   </view>
 </template>
 
 <script>
-import InsPanel from '@/components/InsPanel.vue'
-
-import IndexHead from './components/Head.vue'
+import DashboardSearch from './components/DashboardSearch.vue'
 import SwiperBanner from './components/SwiperBanner.vue'
 import ClassNav from './components/ClassNav.vue'
+import BlueTooth from './components/bluetooth/index.vue'
+
+import { testRequest } from '@/api/test'
 
 export default {
-  components: { SwiperBanner, ClassNav, IndexHead, InsPanel },
+  components: { DashboardSearch, SwiperBanner, ClassNav, BlueTooth },
   options: { addGlobalClass: true },
   data() {
     return {
-      info: 'Hello',
-      keyword: '遥看瀑布挂前川',
       message:
         'uView UI众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用',
     }
   },
-  onLoad() {},
+  onLoad() {
+    this.fetchData()
+  },
   methods: {
-    nextPage() {
-      uni.navigateTo({
-        url: '/pages/detail/index',
+    fetchData() {
+      let request = testRequest({ test: 'test' })
+      request.then((res) => {
+        console.log('%c [ res ]-70', 'font-size:13px; background:pink; color:#bf2c9f;', res)
       })
-    },
-    handleEmit() {
-      this.info = '父组件 触发了emit'
+
+      // request.task.abort()
     },
   },
 }
